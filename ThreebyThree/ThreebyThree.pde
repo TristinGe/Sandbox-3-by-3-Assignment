@@ -1,6 +1,6 @@
 //Global Varaibles
 float rectWidth, rectHeight, ptD;
-color black = #000000, resetWhite = #FFFFFF, red = color(255,0,0);
+color black = #000000, resetWhite = #FFFFFF, red = color(255, 0, 0);
 //Points are organized by row and actually ... hint-hint ... value
 int numberOfPoints = 17;
 float[] ptX = new float[numberOfPoints];
@@ -19,17 +19,24 @@ void setup()
   rectWidth = appWidth/3;
   rectHeight = appHeight/3;
   ptD = appWidth/30;
-  ptX[1] = ptX[5] = ptX[9] = ptX[13] = appWidth*0;
-  ptY[1] = ptY[2] = ptY[3] = ptY[4] = appHeight*0;
   //
-  ptX[2] = ptX[6] = ptX[10] = ptX[14] = appWidth/3;
-  ptX[3] = ptX[7] = ptX[11] = ptX[15] = appWidth*2/3;
+  for (int i=1; i<ptX.length;i+=4) 
+  { ptX[i] = appWidth*0; }//  ptX[1] = ptX[5] = ptX[9] = ptX[13] = appWidth*0
+  for (int i=2; i<ptX.length;i+=4) 
+  { ptX[i] = appWidth/3; }//  ptX[2] = ptX[6] = ptX[10] = ptX[14] = appWidth/3
+  for (int i=3; i<ptX.length;i+=4) 
+  { ptX[i] = appWidth*2/3; }//  ptX[3] = ptX[7] = ptX[11] = ptX[15] = appWidth*2/3
+  for (int i=4; i<ptX.length;i+=4) 
+  { ptX[i] = appWidth*1; }//  ptX[4] = ptX[8] = ptX[12] = ptX[16] = appWidth*1
   //
-  ptX[4] = ptX[8] = ptX[12] = ptX[16] = appWidth*1;
-  ptY[5] = ptY[6] = ptY[7] = ptY[8] = appHeight/3;
-  //
-  ptY[9] = ptY[10] = ptY[11] = ptY[12] = appHeight*2/3;
-  ptY[13] = ptY[14] = ptY[15] = ptY[16] = appHeight*3/3;
+  for (int i=1; i<ptY.length;i+=1) 
+  { ptY[i] = appHeight*0; }//  ptY[1] = ptY[2] = ptY[3] = ptY[4] = appHeight*0;
+  for (int i=5; i<ptY.length;i+=1) 
+  { ptY[i] = appHeight/3; }//  ptY[5] = ptY[6] = ptY[7] = ptY[8] = appHeight/3;
+  for (int i=9; i<ptY.length;i+=1) 
+  { ptY[i] = appHeight*2/3; }//  ptY[9] = ptY[10] = ptY[11] = ptY[12] = appHeight*2/3;
+  for (int i=13; i<ptY.length;i+=1) 
+  { ptY[i] = appHeight*1; }//  ptY[13] = ptY[14] = ptY[15] = ptY[16] = appHeight*3/3;
   //
 }//End setup
 //
@@ -70,8 +77,10 @@ void draw()
   fill(resetWhite);
 }//End draw
 //
-void keyPressed() {}//End keyPressed
+void keyPressed() {
+}//End keyPressed
 //
-void mousePressed() {}//End mousePressed
+void mousePressed() {
+}//End mousePressed
 //
 //End Main Program
