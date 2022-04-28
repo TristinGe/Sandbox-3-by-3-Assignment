@@ -62,53 +62,35 @@ void draw()
   for (int i=1; i<4; i++) 
   {    
   rect(ptX[i], ptY[i], rectWidth, rectHeight);
-  //rect(ptX[1], ptY[1], rectWidth, rectHeight);
-  //rect(ptX[2], ptY[2], rectWidth, rectHeight);
-  //rect(ptX[3], ptY[3], rectWidth, rectHeight);
+  fill(black);
+  ellipse(ptX[i], ptY[i], ptD, ptD);
+  fill(resetWhite);
+  //rect(ptX[1], ptY[1], rectWidth, rectHeight);ellipse(ptX[1], ptY[1], ptD, ptD);
+  //rect(ptX[2], ptY[2], rectWidth, rectHeight);ellipse(ptX[2], ptY[2], ptD, ptD);
+  //rect(ptX[3], ptY[3], rectWidth, rectHeight);ellipse(ptX[3], ptY[3], ptD, ptD);
   }
   //
   for (int i=5; i<8; i++) 
   {  
   rect(ptX[i], ptY[i], rectWidth, rectHeight);
-  //rect(ptX[5], ptY[5], rectWidth, rectHeight);
-  //rect(ptX[6], ptY[6], rectWidth, rectHeight);
-  //rect(ptX[7], ptY[7], rectWidth, rectHeight);
+  fill(black);
+  ellipse(ptX[i], ptY[i], ptD, ptD);
+  fill(resetWhite);
+  //rect(ptX[5], ptY[5], rectWidth, rectHeight);ellipse(ptX[5], ptY[5], ptD, ptD);
+  //rect(ptX[6], ptY[6], rectWidth, rectHeight);ellipse(ptX[6], ptY[6], ptD, ptD);
+  //rect(ptX[7], ptY[7], rectWidth, rectHeight);ellipse(ptX[7], ptY[7], ptD, ptD);
   }
   //
   for (int i=9; i<12; i++) 
   {  
   rect(ptX[i], ptY[i], rectWidth, rectHeight);
-  //rect(ptX[9], ptY[9], rectWidth, rectHeight);
-  //rect(ptX[10], ptY[10], rectWidth, rectHeight);
-  //rect(ptX[11], ptY[11], rectWidth, rectHeight);
-  }
-  //
-  //Starting pts for rect() must be 1-9 & filled black
   fill(black);
-  for (int i=1; i<4; i++) 
-  {
-    ellipse(ptX[i], ptY[i], ptD, ptD);
-    //ellipse(ptX[1], ptY[1], ptD, ptD);
-    //ellipse(ptX[2], ptY[2], ptD, ptD);
-    //ellipse(ptX[3], ptY[3], ptD, ptD);
-  }
-  //
-    for (int i=5; i<8; i++) 
-  {
-    ellipse(ptX[i], ptY[i], ptD, ptD);
-    //ellipse(ptX[5], ptY[5], ptD, ptD);
-    //ellipse(ptX[6], ptY[6], ptD, ptD);
-    //ellipse(ptX[7], ptY[7], ptD, ptD);
-  }
-  //
-    for (int i=9; i<12; i++) 
-  {
-    ellipse(ptX[i], ptY[i], ptD, ptD);
-    //ellipse(ptX[9], ptY[9], ptD, ptD);
-    //ellipse(ptX[10], ptY[10], ptD, ptD);
-    //ellipse(ptX[11], ptY[11], ptD, ptD);
-  }
+  ellipse(ptX[i], ptY[i], ptD, ptD);
   fill(resetWhite);
+  //rect(ptX[9], ptY[9], rectWidth, rectHeight);ellipse(ptX[9], ptY[9], ptD, ptD);
+  //rect(ptX[10], ptY[10], rectWidth, rectHeight);ellipse(ptX[10], ptY[10], ptD, ptD);
+  //rect(ptX[11], ptY[11], rectWidth, rectHeight);ellipse(ptX[11], ptY[11], ptD, ptD);
+  }
   //
   fill(red);
   for (int i=4; i<9; i+=4) 
