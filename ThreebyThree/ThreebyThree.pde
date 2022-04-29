@@ -20,94 +20,49 @@ void setup()
   rectHeight = appHeight/3;
   ptD = appWidth/30;
   //
-  for (int i=1; i<ptX.length; i+=4) 
-  { 
-    ptX[i] = appWidth*0;
-  }//  ptX[1] = ptX[5] = ptX[9] = ptX[13] = appWidth*0
-  for (int i=2; i<ptX.length; i+=4) 
-  { 
-    ptX[i] = appWidth/3;
-  }//  ptX[2] = ptX[6] = ptX[10] = ptX[14] = appWidth/3
-  for (int i=3; i<ptX.length; i+=4) 
-  { 
-    ptX[i] = appWidth*2/3;
-  }//  ptX[3] = ptX[7] = ptX[11] = ptX[15] = appWidth*2/3
-  for (int i=4; i<ptX.length; i+=4) 
-  { 
-    ptX[i] = appWidth*1;
-  }//  ptX[4] = ptX[8] = ptX[12] = ptX[16] = appWidth*1
+  for (int j=1; j<4; j++)
+  {
+    for (int i=1; i<ptX.length; i+=4) 
+    { 
+      ptX[i+j] = appWidth*j/3.0;
+    }
+  }
   //
-  for (int i=1; i<5; i+=1) 
-  { 
-    ptY[i] = appHeight*0;
-  }//  ptY[1] = ptY[2] = ptY[3] = ptY[4] = appHeight*0;
-  for (int i=5; i<9; i+=1) 
-  { 
-    ptY[i] = appHeight/3;
-  }//  ptY[5] = ptY[6] = ptY[7] = ptY[8] = appHeight/3;
-  for (int i=9; i<13; i+=1) 
-  { 
-    ptY[i] = appHeight*2/3;
-  }//  ptY[9] = ptY[10] = ptY[11] = ptY[12] = appHeight*2/3;
-  for (int i=13; i<17; i++) 
-  { 
-    ptY[i] = appHeight*1;
-  }//  ptY[13] = ptY[14] = ptY[15] = ptY[16] = appHeight*3/3;
   //
+  for (int j=0; j<4; j+=4)
+  {
+    for (int i=1+j; i<5; i+=1) 
+    {
+      ptY[i+(j-j)] = appHeight*j/3.0;
+    }
+  }
+  //
+  printArray(ptX);
+  printArray(ptY);
 }//End setup
 //
 void draw() 
 {
   //Rectangle matrix must be 3 by 3
-  for (int i=1; i<4; i++) 
-  {    
-  rect(ptX[i], ptY[i], rectWidth, rectHeight);
-  fill(black);
-  ellipse(ptX[i], ptY[i], ptD, ptD);
-  fill(resetWhite);
-  //rect(ptX[1], ptY[1], rectWidth, rectHeight);ellipse(ptX[1], ptY[1], ptD, ptD);
-  //rect(ptX[2], ptY[2], rectWidth, rectHeight);ellipse(ptX[2], ptY[2], ptD, ptD);
-  //rect(ptX[3], ptY[3], rectWidth, rectHeight);ellipse(ptX[3], ptY[3], ptD, ptD);
-  }
-  //
-  for (int i=5; i<8; i++) 
-  {  
-  rect(ptX[i], ptY[i], rectWidth, rectHeight);
-  fill(black);
-  ellipse(ptX[i], ptY[i], ptD, ptD);
-  fill(resetWhite);
-  //rect(ptX[5], ptY[5], rectWidth, rectHeight);ellipse(ptX[5], ptY[5], ptD, ptD);
-  //rect(ptX[6], ptY[6], rectWidth, rectHeight);ellipse(ptX[6], ptY[6], ptD, ptD);
-  //rect(ptX[7], ptY[7], rectWidth, rectHeight);ellipse(ptX[7], ptY[7], ptD, ptD);
-  }
-  //
-  for (int i=9; i<12; i++) 
-  {  
-  rect(ptX[i], ptY[i], rectWidth, rectHeight);
-  fill(black);
-  ellipse(ptX[i], ptY[i], ptD, ptD);
-  fill(resetWhite);
-  //rect(ptX[9], ptY[9], rectWidth, rectHeight);ellipse(ptX[9], ptY[9], ptD, ptD);
-  //rect(ptX[10], ptY[10], rectWidth, rectHeight);ellipse(ptX[10], ptY[10], ptD, ptD);
-  //rect(ptX[11], ptY[11], rectWidth, rectHeight);ellipse(ptX[11], ptY[11], ptD, ptD);
+  for ( int j=0; j<9; j+=4) {
+    for (int i=1+j; i<4; i++) 
+    {    
+      rect(ptX[i+j], ptY[i], rectWidth, rectHeight);
+      fill(black);
+      ellipse(ptX[i+j], ptY[i], ptD, ptD);
+      fill(resetWhite);
+    }
   }
   //
   fill(red);
   for (int i=4; i<9; i+=4) 
   {
     ellipse(ptX[i], ptY[i], ptD, ptD);
-    //ellipse(ptX[4], ptY[4], ptD, ptD);
-    //ellipse(ptX[8], ptY[8], ptD, ptD);
   }
   //
   for (int i=12; i<17; i++) 
   {
     ellipse(ptX[i], ptY[i], ptD, ptD);
-    //ellipse(ptX[12], ptY[12], ptD, ptD);
-    //ellipse(ptX[13], ptY[13], ptD, ptD);
-    //ellipse(ptX[14], ptY[14], ptD, ptD);
-    //ellipse(ptX[15], ptY[15], ptD, ptD);
-    //ellipse(ptX[16], ptY[16], ptD, ptD);
   }
   fill(resetWhite);
 }//End draw
