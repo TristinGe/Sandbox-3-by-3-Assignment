@@ -1,5 +1,5 @@
 //Global Variables
-color black=#000000, resetWhite=#FFFFFF, red=#FF0000; //Not night mode (lots of Blue)
+color black=#000000, resetWhite=#FFFFFF, red=#FF0000, yellow=#FFFF00; //Not night mode (lots of Blue)
 float rectWidth, rectHeight, ptD;
 //Points are organized by row and actaully ... hint-hint ... value
 int numberOfPoints = 17;
@@ -68,10 +68,12 @@ void draw() {
   rect(ptX[10], ptY[10], rectWidth, rectHeight);
   rect(ptX[11], ptY[11], rectWidth, rectHeight);
   //
-  fill(black);
-  rect( buttonX[1], buttonY[1], buttonWidth[1], buttonHeight[1]);
-  rect( buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
-  rect( buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
+  fill(yellow);
+  if() {fill(yellow);rect( buttonX[1], buttonY[1], buttonWidth[1], buttonHeight[1]);} else {fill(black);rect( buttonX[1], buttonY[1], buttonWidth[1], buttonHeight[1]);}
+  if() {fill(yellow);rect( buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);} else {fill(black);rect( buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);}
+  if() {fill(yellow);rect( buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);} else {fill(black);rect( buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);}
+  if() {fill(yellow);rect(ptX[3], ptY[3], rectWidth, rectHeight);} else {fill(black);rect(ptX[3], ptY[3], rectWidth, rectHeight);}
+  
   fill(resetWhite);
   //
   fill(black);
