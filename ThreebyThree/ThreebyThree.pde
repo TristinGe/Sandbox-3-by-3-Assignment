@@ -44,10 +44,10 @@ void setup()
   buttonHeight[2] = appHeight/6;
   //
   //3
-  buttonX[3] = appWidth*13/18;//section 3
-  buttonY[3] = appHeight*8/9;
-  buttonWidth[3] = appWidth/18;
-  buttonHeight[3] = appHeight/18;
+  buttonX[3] = appWidth*11/15;//section 3
+  buttonY[3] = appHeight*13/15;
+  buttonWidth[3] = appWidth/15;
+  buttonHeight[3] = appHeight/15;
   //
   //Verifying Array Read-in
   print("\nX-valuses are:");
