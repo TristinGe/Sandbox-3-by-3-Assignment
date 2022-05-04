@@ -10,7 +10,7 @@ float[] buttonX = new float[numberofButtons];
 float[] buttonY = new float[numberofButtons];
 float[] buttonWidth = new float[numberofButtons];
 float[] buttonHeight = new float[numberofButtons];
- Boolean turnOnYellow=true;
+ Boolean turnOnYellow=false;
 //
 void setup()
 {
