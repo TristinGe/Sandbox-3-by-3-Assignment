@@ -63,18 +63,18 @@ void draw() {
   //
   //Sequential Ordering of Code example
   //Single Line Ifs
-  //if ( turnOnYellow==true) fill(yellow);
-  //if ( turnOnPink==true) fill(pink); //Overwrites the yellow
-  //if ( turnOnBrown==true) fill(brown);
+  if ( turnOnYellow==true) fill(yellow);
+  if ( turnOnPink==true) fill(pink); //Overwrites the yellow
+  if ( turnOnBrown==true) fill(brown);
   //
   //Example UF-ElseIf-Else that reverses the order of the Sequencial Line Ifs
-  if (turnOnYellow==true) {
+  /*if (turnOnYellow==true) {
     fill(yellow);
   } else if (turnOnPink==true) {
     fill(pink);
   } else if (turnOnBrown==true) {
     fill(brown);
-  }
+  }*/
    
   rect(ptX[2], ptY[2], rectWidth, rectHeight);//Button change the colour of RECT
   fill(resetWhite);
