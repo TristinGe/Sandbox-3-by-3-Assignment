@@ -61,11 +61,21 @@ void draw() {
   //Rectangles must be 3 by 3
   rect(ptX[1], ptY[1], rectWidth, rectHeight);
   //
-  //
+  //Sequential Ordering of Code example
   //Single Line Ifs
-  if ( turnOnYellow==true) fill(yellow);
-  if ( turnOnPink==true) fill(pink); //Overwrites the yellow
-  if ( turnOnBrown==true) fill(brown);
+  //if ( turnOnYellow==true) fill(yellow);
+  //if ( turnOnPink==true) fill(pink); //Overwrites the yellow
+  //if ( turnOnBrown==true) fill(brown);
+  //
+  //Example UF-ElseIf-Else that reverses the order of the Sequencial Line Ifs
+  if (turnOnYellow==true) {
+    fill(yellow);
+  } else if (turnOnPink==true) {
+    fill(pink);
+  } else if (turnOnBrown==true) {
+    fill(brown);
+  }
+   
   rect(ptX[2], ptY[2], rectWidth, rectHeight);//Button change the colour of RECT
   fill(resetWhite);
   //
@@ -139,18 +149,51 @@ void keyPressed() {
 //
 void mousePressed() {
   if ( mouseX>=buttonX[1] && mouseX<=buttonX[1]+buttonWidth[1] && mouseY>=buttonY[1] && mouseY<=buttonY[1]+buttonHeight[1] ) 
-  {println("BTN 1 Acrivated"); turnOnYellow=true;}
-    //
+  {
+    println("BTN 1 Acrivated"); 
+    if (turnOnYellow==true) {
+      turnOnYellow=false;
+    } else {
+      turnOnYellow=true;
+      turnOnPink=false;
+      turnOnBrown=false;
+    }
+    //if (turnOnPink==true) {turnOnPink=false;turnOnYellow=true;}
+    //if (turnOnBrown==true) {turnOnBrown=false;turnOnYellow=true;}
+  }
+  //
   if ( mouseX>=buttonX[2] && mouseX<=buttonX[2]+buttonWidth[2] && mouseY>=buttonY[2] && mouseY<=buttonY[2]+buttonHeight[2]) 
-   {println("BTN 2 Acrivated"); turnOnPink=true;}
-    //
+  {
+    println("BTN 2 Acrivated");
+    if (turnOnPink==true) {
+      turnOnPink=false;
+    } else {
+      turnOnPink=true;
+      turnOnBrown=false;
+    }
+    //if (turnOnBrown==true) {turnOnBrown=false;turnOnPink=true;}
+   }
+  //
   if ( mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3])
-   {println("BTN 3 Acrivated"); turnOnBrown=true;}
-    //
+  {
+    println("BTN 3 Acrivated");
+    if (turnOnBrown==true) {
+      turnOnBrown=false;
+    } else {
+      turnOnBrown=true;
+    }
+  }
+  //
   //Button: reset to beginning
   if ( mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight) 
-   {println("BTN 4 Acrivated"); turnOnYellow=false; turnOnPink=false;turnOnBrown=false;}
-   //
+  {
+    println("BTN 4 Acrivated"); 
+    //if () {} else{}
+    turnOnYellow=false; 
+    turnOnPink=false;
+    turnOnBrown=false;
+  }
+  //
 }//End mousePressed
 //
 //End MAIN Program
