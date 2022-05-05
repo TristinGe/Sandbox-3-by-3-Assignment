@@ -1,5 +1,5 @@
 //Global Variables
-color black=#000000, resetWhite=#FFFFFF, red=#FF0000, yellow=#FFFF00; //Not night mode (lots of Blue)
+color black=#000000, resetWhite=#FFFFFF, red=#FF0000, yellow=#FFFF00, pink=#FF90F0, brown=#BC7400; //Not night mode (lots of Blue)
 float rectWidth, rectHeight, ptD;
 //Points are organized by row and actaully ... hint-hint ... value
 int numberOfPoints = 17;
@@ -10,7 +10,7 @@ float[] buttonX = new float[numberofButtons];
 float[] buttonY = new float[numberofButtons];
 float[] buttonWidth = new float[numberofButtons];
 float[] buttonHeight = new float[numberofButtons];
- Boolean turnOnYellow=false;
+Boolean turnOnYellow=false, turnOnPink=false, turnOnBrown=false;
 //
 void setup()
 {
@@ -61,9 +61,11 @@ void draw() {
   //Rectangles must be 3 by 3
   rect(ptX[1], ptY[1], rectWidth, rectHeight);
   //
-  if( turnOnYellow==true) fill(yellow);
-  //if() fill(pink);
-  //if() fill(brown);
+  //
+  //Single Line Ifs
+  if ( turnOnYellow==true) fill(yellow);
+  if ( turnOnPink==true) fill(pink); //Overwrites the yellow
+  if ( turnOnBrown==true) fill(brown);
   rect(ptX[2], ptY[2], rectWidth, rectHeight);//Button change the colour of RECT
   fill(resetWhite);
   //
@@ -136,10 +138,19 @@ void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
-  if ( mouseX>=buttonX[1] && mouseX<=buttonX[1]+buttonWidth[1] && mouseY>=buttonY[1] && mouseY<=buttonY[1]+buttonHeight[1] ) {println("BTN 1 Acrivated");}
-  if ( mouseX>=buttonX[2] && mouseX<=buttonX[2]+buttonWidth[2] && mouseY>=buttonY[2] && mouseY<=buttonY[2]+buttonHeight[2]) {println("BTN 2 Acrivated");}
-  if ( mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3]) {println("BTN 3 Acrivated");}
-  if ( mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight) {println("BTN 4 Acrivated");}
+  if ( mouseX>=buttonX[1] && mouseX<=buttonX[1]+buttonWidth[1] && mouseY>=buttonY[1] && mouseY<=buttonY[1]+buttonHeight[1] ) 
+  {println("BTN 1 Acrivated"); turnOnYellow=true;}
+    //
+  if ( mouseX>=buttonX[2] && mouseX<=buttonX[2]+buttonWidth[2] && mouseY>=buttonY[2] && mouseY<=buttonY[2]+buttonHeight[2]) 
+   {println("BTN 2 Acrivated"); turnOnPink=true;}
+    //
+  if ( mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3])
+   {println("BTN 3 Acrivated"); turnOnBrown=true;}
+    //
+  //Button: reset to beginning
+  if ( mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight) 
+   {println("BTN 4 Acrivated"); turnOnYellow=false; turnOnPink=false;turnOnBrown=false;}
+   //
 }//End mousePressed
 //
 //End MAIN Program
