@@ -4,7 +4,7 @@ void sec2() {
 }
 //
 void sec1() {
-  //image(pic1, image1X, image1Y, imageWidth, imageHeight);
+  
   //box5Text();
   button1();
   //line(pt6X, pt6Y, pt7X, pt7Y); //because the pic overlaps the border
@@ -14,7 +14,9 @@ void sec1() {
 //
 void sec3()
 {
-  button3();
+  if (sec1on == true){
+  image(pic1, ptX[3], ptY[3], rectWidth, rectHeight);
+  button3();}
 }
 //
 void sec4()

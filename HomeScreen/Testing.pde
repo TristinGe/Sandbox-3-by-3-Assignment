@@ -2,8 +2,6 @@ void test(){
   if ( mouseX>=buttonX[1] && mouseX<=buttonX[1]+buttonWidth[1] && mouseY>=buttonY[1] && mouseY<=buttonY[1]+buttonHeight[1] ) 
   { println("BTN 1 Acrivated"); }
   //
-
-  //
   if ( mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3])
   {println("BTN 3 Acrivated");}
   //

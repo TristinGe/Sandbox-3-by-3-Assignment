@@ -14,6 +14,8 @@ float[] buttonHeight = new float[numberofButtons];
 Boolean turnOnYellow=false, turnOnPink=false, turnOnBrown=false;
 PFont titleFont;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight, restartButtonX, restartButtonY, restartButtonWidth, restartButtonHeight;
+PImage pic1;
+Boolean sec1on=false;
 //
 void setup()
 {
@@ -96,6 +98,8 @@ void setup()
   buttonY[9] = appHeight/12;
   buttonWidth[9] = appWidth/12;
   buttonHeight[9] = appHeight/12;
+  //
+  pic1 = loadImage ("DIF.jpg");//1920*1080
 
   
 
@@ -113,10 +117,6 @@ void draw() {
   sec7();
   sec8();
   sec9();
-  //
-  //Sequential Ordering of Code example
-  //Single Line Ifs
-
 
   fill(resetWhite);
   //if ( mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight ) {
@@ -128,7 +128,6 @@ void draw() {
 //  }
 
   fill(resetWhite);
-
   points();
 }//End draw
 //
@@ -137,6 +136,14 @@ void keyPressed() {
 //
 void mousePressed() {
   test();
+  if (mouseX>=buttonX[1] && mouseX<=buttonX[1]+buttonWidth[1] && mouseY>=buttonY[1] && mouseY<=buttonY[1]+buttonHeight[1]) sec1on = true;
+  
+  
+  if ( mouseX>=quitButtonX && mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) exit();
+  if ( mouseX>=restartButtonX && mouseX<=restartButtonX+restartButtonWidth && mouseY>=restartButtonY && mouseY<=restartButtonY+restartButtonHeight) {
+    sec1on = false;
+
+  }
 }
   //
 //}//End mousePressed
