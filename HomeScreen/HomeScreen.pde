@@ -1,5 +1,6 @@
 //Global Variables
-color black=#000000, resetWhite=#FFFFFF, red=#FF0000, yellow=#FFFF00, pink=#FF90F0, brown=#BC7400, gray = #ACABAD; //Not night mode (lots of Blue)
+color black=#000000, resetWhite=#FFFFFF, red=#FF0000, gray = #ACABAD; //Not night mode (lots of Blue)
+color yellow=#FFFF00, pink=#FF90F0, brown=#BC7400;
 float rectWidth, rectHeight, ptD;
 //Points are organized by row and actaully ... hint-hint ... value
 int numberOfPoints = 17;
@@ -43,6 +44,7 @@ void setup()
   buttonWidth[1] = appWidth/9;
   buttonHeight[1] = appHeight/9;
   //
+  //quit
   quitButtonX = rectWidth*5/4;
   quitButtonY = rectHeight*1/9;
   quitButtonWidth = rectWidth*1/2;
@@ -53,23 +55,47 @@ void setup()
   restartButtonWidth = rectWidth*1/2;
   restartButtonHeight = rectHeight*1/3;
   //
-  //2
-  buttonX[2] = appWidth*10/12-appWidth/24;//section 2
-  buttonY[2] = appHeight/12;
-  buttonWidth[2] = appWidth/12;
-  buttonHeight[2] = appHeight/12;
-  //
   //3
-  buttonX[3] = appWidth*10/12-appWidth/24;//section 3
-  buttonY[3] = appHeight*5/12;
+  buttonX[3] = appWidth*10/12-appWidth/24;//section 2
+  buttonY[3] = appHeight/12;
   buttonWidth[3] = appWidth/12;
   buttonHeight[3] = appHeight/12;
   //
   //4
-  buttonX[4] = appWidth*10/12-appWidth/24;//section 4
-  buttonY[4] = appHeight*9/12;
+  buttonX[4] = appWidth*10/12-appWidth/24;//section 3
+  buttonY[4] = appHeight*5/12;
   buttonWidth[4] = appWidth/12;
   buttonHeight[4] = appHeight/12;
+  //
+  //5
+  buttonX[5] = appWidth*10/12-appWidth/24;//section 4
+  buttonY[5] = appHeight*9/12;
+  buttonWidth[5] = appWidth/12;
+  buttonHeight[5] = appHeight/12;
+  //
+  //6
+  buttonX[6] = appWidth*5/12+appWidth/24;//section 4
+  buttonY[6] = appHeight*9/12;
+  buttonWidth[6] = appWidth/12;
+  buttonHeight[6] = appHeight/12;
+  //
+  //7
+  buttonX[7] = appWidth/12+appWidth/24;//section 4
+  buttonY[7] = appHeight*9/12;
+  buttonWidth[7] = appWidth/12;
+  buttonHeight[7] = appHeight/12;
+  //
+  //8
+  buttonX[8] = appWidth/12+appWidth/24;//section 4
+  buttonY[8] = appHeight*5/12;
+  buttonWidth[8] = appWidth/12;
+  buttonHeight[8] = appHeight/12;
+  //
+  //9
+  buttonX[9] = appWidth/12+appWidth/24;//section 4
+  buttonY[9] = appHeight/12;
+  buttonWidth[9] = appWidth/12;
+  buttonHeight[9] = appHeight/12;
 
   
 
@@ -83,20 +109,16 @@ void draw() {
   sec3();
   sec4();
   sec5();
-  //sec6();
-  //sec7();
-  //sec8();
-  //sec9();
+  sec6();
+  sec7();
+  sec8();
+  sec9();
   //
   //Sequential Ordering of Code example
   //Single Line Ifs
 
 
   fill(resetWhite);
-  //
-  
-  //
-
   //if ( mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight ) {
    // fill(yellow);
    // rect(ptX[3], ptY[3], rectWidth, rectHeight);
@@ -106,16 +128,7 @@ void draw() {
 //  }
 
   fill(resetWhite);
-  //
-  //fill(black);
-  //Starting pts for rect() must be 1-9 & filled black
-  
-  //fill(resetWhite); //Best Practice
-  //
-  //fill(red);
-  //Points for all other ellipses must be red
-  
-  //fill(resetWhite); //Best Practice
+
   points();
 }//End draw
 //
@@ -123,52 +136,9 @@ void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
-  /*if ( mouseX>=buttonX[1] && mouseX<=buttonX[1]+buttonWidth[1] && mouseY>=buttonY[1] && mouseY<=buttonY[1]+buttonHeight[1] ) 
-  {
-    println("BTN 1 Acrivated"); 
-    if (turnOnYellow==true) {
-      turnOnYellow=false;
-    } else {
-      turnOnYellow=true;
-      turnOnPink=false;
-      turnOnBrown=false;
-    }
-    //if (turnOnPink==true) {turnOnPink=false;turnOnYellow=true;}
-    //if (turnOnBrown==true) {turnOnBrown=false;turnOnYellow=true;}
-  }
+  test();
+}
   //
-  if ( mouseX>=buttonX[2] && mouseX<=buttonX[2]+buttonWidth[2] && mouseY>=buttonY[2] && mouseY<=buttonY[2]+buttonHeight[2]) 
-  {
-    println("BTN 2 Acrivated");
-    if (turnOnPink==true) {
-      turnOnPink=false;
-    } else {
-      turnOnPink=true;
-      turnOnBrown=false;
-    }
-    //if (turnOnBrown==true) {turnOnBrown=false;turnOnPink=true;}
-   }
-  //
-  if ( mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3])
-  {
-    println("BTN 3 Acrivated");
-    if (turnOnBrown==true) {
-      turnOnBrown=false;
-    } else {
-      turnOnBrown=true;
-    }
-  }
-  //
-  //Button: reset to beginning
-  if ( mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight) 
-  {
-    println("BTN 4 Acrivated"); 
-    //if () {} else{}
-    turnOnYellow=false; 
-    turnOnPink=false;
-    turnOnBrown=false;
-  }*/
-  //
-}//End mousePressed
+//}//End mousePressed
 //
 //End MAIN Program

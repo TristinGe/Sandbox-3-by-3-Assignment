@@ -14,15 +14,36 @@ void sec1() {
 //
 void sec3()
 {
-  button2();
+  button3();
 }
 //
 void sec4()
 {
-  button3();
+  button4();
 }
 //
 void sec5()
 {
-  button4();
+  button5();
+}
+//
+void sec6()
+{
+  button6();
+}
+//
+void sec7()
+{
+  button7();
+}
+//
+void sec8()
+{
+  button8();
+}
+//
+//
+void sec9()
+{
+  button9();
 }
