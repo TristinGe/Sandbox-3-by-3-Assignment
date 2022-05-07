@@ -5,7 +5,7 @@ float rectWidth, rectHeight, ptD;
 int numberOfPoints = 17;
 float[] ptX = new float[numberOfPoints];
 float[] ptY = new float[numberOfPoints];
-int numberofButtons = 4;//will be 11:quit, reset, and 9 more buttons, 1 per section(3*3)
+int numberofButtons = 12;//will be 11:quit, reset, and 9 more buttons, 1 per section(3*3)
 float[] buttonX = new float[numberofButtons];
 float[] buttonY = new float[numberofButtons];
 float[] buttonWidth = new float[numberofButtons];
@@ -37,38 +37,42 @@ void setup()
   ptY[9] = ptY[10] = ptY[11] = ptY[12] = appHeight*2/3;
   ptY[13] = ptY[14] = ptY[15] = ptY[16] = appHeight*3/3;
   //
-  //1
+  //start
   buttonX[1] = rectWidth/2+appWidth/3.5;
   buttonY[1] = rectHeight/2+appHeight/3.5;
   buttonWidth[1] = appWidth/9;
   buttonHeight[1] = appHeight/9;
   //
-  //2
-  buttonX[2] = appWidth/2;//section 2
-  buttonY[2] = appHeight/3;
-  buttonWidth[2] = appWidth/6;
-  buttonHeight[2] = appHeight/6;
-  //
-  //3
-  buttonX[3] = appWidth*11/15;//section 3
-  buttonY[3] = appHeight*13/15;
-  buttonWidth[3] = appWidth/15;
-  buttonHeight[3] = appHeight/15;
-  //
-  //Verifying Array Read-in
-  print("\nX-valuses are:");
-  print(ptX);
-  print("\nY-valuses are:");
-  print(ptY);
-  //
   quitButtonX = rectWidth*5/4;
   quitButtonY = rectHeight*1/9;
   quitButtonWidth = rectWidth*1/2;
   quitButtonHeight = rectHeight*1/3;
+  //
   restartButtonX = rectWidth*5/4;
   restartButtonY = rectHeight*5/9;
   restartButtonWidth = rectWidth*1/2;
   restartButtonHeight = rectHeight*1/3;
+  //
+  //2
+  buttonX[2] = appWidth*10/12-appWidth/24;//section 2
+  buttonY[2] = appHeight/12;
+  buttonWidth[2] = appWidth/12;
+  buttonHeight[2] = appHeight/12;
+  //
+  //3
+  buttonX[3] = appWidth*10/12-appWidth/24;//section 3
+  buttonY[3] = appHeight*5/12;
+  buttonWidth[3] = appWidth/12;
+  buttonHeight[3] = appHeight/12;
+  //
+  //4
+  buttonX[4] = appWidth*10/12-appWidth/24;//section 4
+  buttonY[4] = appHeight*9/12;
+  buttonWidth[4] = appWidth/12;
+  buttonHeight[4] = appHeight/12;
+
+  
+
 }//End setup
 //
 void draw() {
@@ -76,40 +80,30 @@ void draw() {
   rects();
   sec2();
   sec1();
+  sec3();
+  sec4();
+  sec5();
+  //sec6();
+  //sec7();
+  //sec8();
+  //sec9();
   //
   //Sequential Ordering of Code example
   //Single Line Ifs
-  if ( turnOnYellow==true) fill(yellow);
-  if ( turnOnPink==true) fill(pink); //Overwrites the yellow
-  if ( turnOnBrown==true) fill(brown);
+
 
   fill(resetWhite);
   //
   
   //
-  fill(yellow);
-  
-  if ( mouseX>=buttonX[2] && mouseX<=buttonX[2]+buttonWidth[2] && mouseY>=buttonY[2] && mouseY<=buttonY[2]+buttonHeight[2] ) {
-    fill(yellow);
-    rect( buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
-  } else {
-    fill(black);
-    rect( buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
-  }
-  if ( mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3] ) {
-    fill(yellow);
-    rect( buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
-  } else {
-    fill(black);
-    rect( buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
-  }
-  if ( mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight ) {
-    fill(yellow);
-    rect(ptX[3], ptY[3], rectWidth, rectHeight);
-  } else {
-    fill(black);
-    rect(ptX[3], ptY[3], rectWidth, rectHeight);
-  }
+
+  //if ( mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight ) {
+   // fill(yellow);
+   // rect(ptX[3], ptY[3], rectWidth, rectHeight);
+ // } else {
+ //   fill(black);
+ //   rect(ptX[3], ptY[3], rectWidth, rectHeight);
+//  }
 
   fill(resetWhite);
   //
@@ -129,7 +123,7 @@ void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
-  if ( mouseX>=buttonX[1] && mouseX<=buttonX[1]+buttonWidth[1] && mouseY>=buttonY[1] && mouseY<=buttonY[1]+buttonHeight[1] ) 
+  /*if ( mouseX>=buttonX[1] && mouseX<=buttonX[1]+buttonWidth[1] && mouseY>=buttonY[1] && mouseY<=buttonY[1]+buttonHeight[1] ) 
   {
     println("BTN 1 Acrivated"); 
     if (turnOnYellow==true) {
@@ -173,7 +167,7 @@ void mousePressed() {
     turnOnYellow=false; 
     turnOnPink=false;
     turnOnBrown=false;
-  }
+  }*/
   //
 }//End mousePressed
 //

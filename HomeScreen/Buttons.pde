@@ -49,3 +49,54 @@ void restartButton() {
   }
   fill(resetWhite);
 }
+//
+void button2() {
+  rect(buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
+  if ( mouseX>=buttonX[2] && mouseX<=buttonX[2]+buttonWidth[2] && mouseY>=buttonY[2] && mouseY<=buttonY[2]+buttonHeight[2]) {
+    fill(black);
+    rect(buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
+    fill(resetWhite);
+    sec2Texta();
+  } else {
+    stroke(resetWhite);
+    fill(resetWhite);
+    rect(buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
+    stroke(black);
+    fill(black);
+    sec2Textb();
+  }
+  fill(resetWhite);}
+  //
+void button3() {
+  rect(buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
+  if ( mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3]) {
+    fill(black);
+    rect(buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
+    fill(resetWhite);
+    sec3Texta();
+  } else {
+    stroke(resetWhite);
+    fill(resetWhite);
+    rect(buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
+    stroke(black);
+    fill(black);
+    sec3Textb();
+  }
+  fill(resetWhite);}
+  //
+void button4() {
+  rect(buttonX[4], buttonY[4], buttonWidth[4], buttonHeight[4]);
+  if ( mouseX>=buttonX[4] && mouseX<=buttonX[4]+buttonWidth[4] && mouseY>=buttonY[4] && mouseY<=buttonY[4]+buttonHeight[4]) {
+    fill(black);
+    rect(buttonX[4], buttonY[4], buttonWidth[4], buttonHeight[4]);
+    fill(resetWhite);
+    sec4Texta();
+  } else {
+    stroke(resetWhite);
+    fill(resetWhite);
+    rect(buttonX[4], buttonY[4], buttonWidth[4], buttonHeight[4]);
+    stroke(black);
+    fill(black);
+    sec4Textb();
+  }
+  fill(resetWhite);}
