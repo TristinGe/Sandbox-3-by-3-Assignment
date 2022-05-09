@@ -102,7 +102,7 @@ void setup()
   pic0 = loadImage ("DIF.jpg");//1920*1080
   pic3 = loadImage ("SEEDD.jpg");//1920*1080
   pic4 = loadImage ("00.jpg");//1920*1080
-  pic5 = loadImage ("aldnoahzero.jpg");//1280*720
+  pic5 = loadImage ("aldnoahzero.png");//1280*720
 
   
 
