@@ -2,6 +2,7 @@ String start= "Start";
 String quit= "Quit";
 String restart= "Restart";
 String next= "Next";
+String button9 = "Again?";
 
 void quitText() {
   textAlign (CENTER, CENTER);
@@ -109,10 +110,10 @@ void sec9Texta() {
   textAlign (CENTER, CENTER);
   textFont(titleFont,25);
   fill(resetWhite);
-  text(next, buttonX[9], buttonY[9], buttonWidth[9], buttonHeight[9]);}
+  text(button9, buttonX[9], buttonY[9], buttonWidth[9], buttonHeight[9]);}
 void sec9Textb() {
   textAlign (CENTER, CENTER);
   textFont(titleFont,25);
   fill(black);
-  text(next, buttonX[9], buttonY[9], buttonWidth[9], buttonHeight[9]);
+  text(button9, buttonX[9], buttonY[9], buttonWidth[9], buttonHeight[9]);
   fill(resetWhite);}
