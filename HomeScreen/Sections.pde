@@ -42,7 +42,7 @@ void sec5()
 void sec6()
 {
   if ( sec6on == true){
-  image(pic0, ptX[10], ptY[10], rectWidth, rectHeight);
+  image(pic6, ptX[10], ptY[10], rectWidth, rectHeight);
   line(ptX[10], ptY[10],ptX[11], ptY[11]);
   line(ptX[10], ptY[10],ptX[14], ptY[14]);
   button6();}
@@ -51,7 +51,7 @@ void sec6()
 void sec7()
 {
   if ( sec7on == true){
-  image(pic0, ptX[9], ptY[9], rectWidth, rectHeight);
+  image(pic7, ptX[9], ptY[9], rectWidth, rectHeight);
   line(ptX[9], ptY[9],ptX[10], ptY[10]);
   line(ptX[9], ptY[9],ptX[13], ptY[13]);
   button7();}
@@ -69,7 +69,7 @@ void sec8()
 void sec9()
 {
   if ( sec9on == true){
-  image(pic0, ptX[1], ptY[1], rectWidth, rectHeight);
+  image(pic9, ptX[1], ptY[1], rectWidth, rectHeight);
   line(ptX[1], ptY[1],ptX[2], ptY[2]);
   line(ptX[1], ptY[1],ptX[5], ptY[5]);
   button9();}

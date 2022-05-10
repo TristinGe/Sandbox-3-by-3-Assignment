@@ -6,12 +6,9 @@ void display() {
   //Swap display key variables for testing
   appWidth = width; //displayWidth
   appHeight = height; //displayHeight
-  //With Strings, easier to print to the console or CANVAS
-  //Display Orientation: Landscape, not portrait nor square
   String ls="Landscape or Square", p="portrait", DO="Display Orientation:", instruct="Turn Your Phone";
-  String orientation = ( appWidth >= appHeight ) ? ls : p ; //Ternary Operator, repeats IF-ELSE to populate variables
+  String orientation = ( appWidth >= appHeight ) ? ls : p ; 
   println (DO, orientation);
-  //if ( orientation==p ) println(instruct); //Testing the orientation variable
   if ( orientation==ls ) {
     println("Good to Go");
   } else { //Break our app if not landscape

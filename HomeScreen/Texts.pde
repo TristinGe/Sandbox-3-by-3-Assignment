@@ -42,7 +42,7 @@ void sec3Texta() {
 void sec3Textb() {
   textAlign (CENTER, CENTER);
   textFont(titleFont,25);
-  fill(black);
+  fill(red);
   text(next, buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
   fill(resetWhite);}
   //
@@ -54,7 +54,7 @@ void sec4Texta() {
 void sec4Textb() {
   textAlign (CENTER, CENTER);
   textFont(titleFont,25);
-  fill(black);
+  fill(red);
   text(next, buttonX[4], buttonY[4], buttonWidth[4], buttonHeight[4]);
   fill(resetWhite);}
   //
@@ -66,7 +66,7 @@ void sec5Texta() {
 void sec5Textb() {
   textAlign (CENTER, CENTER);
   textFont(titleFont,25);
-  fill(black);
+  fill(red);
   text(next, buttonX[5], buttonY[5], buttonWidth[5], buttonHeight[5]);
   fill(resetWhite);}
   //
@@ -78,7 +78,7 @@ void sec6Texta() {
 void sec6Textb() {
   textAlign (CENTER, CENTER);
   textFont(titleFont,25);
-  fill(black);
+  fill(red);
   text(next, buttonX[6], buttonY[6], buttonWidth[6], buttonHeight[6]);
   fill(resetWhite);}
   //
@@ -90,7 +90,7 @@ void sec7Texta() {
 void sec7Textb() {
   textAlign (CENTER, CENTER);
   textFont(titleFont,25);
-  fill(black);
+  fill(red);
   text(next, buttonX[7], buttonY[7], buttonWidth[7], buttonHeight[7]);
   fill(resetWhite);}
   //
@@ -102,7 +102,7 @@ void sec8Texta() {
 void sec8Textb() {
   textAlign (CENTER, CENTER);
   textFont(titleFont,25);
-  fill(black);
+  fill(red);
   text(next, buttonX[8], buttonY[8], buttonWidth[8], buttonHeight[8]);
   fill(resetWhite);}
   //
@@ -114,6 +114,6 @@ void sec9Texta() {
 void sec9Textb() {
   textAlign (CENTER, CENTER);
   textFont(titleFont,25);
-  fill(black);
+  fill(red);
   text(button9, buttonX[9], buttonY[9], buttonWidth[9], buttonHeight[9]);
   fill(resetWhite);}
